@@ -54,7 +54,7 @@ select_pub_key() {
     fi
     echo "Get key from URL..."
     PUB_KEY=$(curl -fsSL ${KEY_URL})
-    echo $PUB_KEY
+    #echo $PUB_KEY
 }
 get_github_key() {
     if [ "${KEY_ID}" == '' ]; then
