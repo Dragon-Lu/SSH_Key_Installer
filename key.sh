@@ -37,17 +37,17 @@ fi
 
 select_pub_key() {
     if [ "${KEY_NUM}" == '' ]; then
-        echo -e "Please select a public key:\n 1.Low security\n 2.Medium security\n 3.High security"
+        echo -e "1.Low security\n 2.Medium security\n 3.High security\n Please select a public key[1-3]:"
         read -e  KEY_NUM
         case $KEY_NUM in
         "1")
-            KEY_URL="https://public.144444.xyz/low.pub"
+            KEY_URL="https://public.144444.xyz/low.txt"
             ;;
         "2")
-            KEY_URL="https://public.144444.xyz/medium.pub"
+            KEY_URL="https://public.144444.xyz/medium.txt"
             ;;
         "3")
-            KEY_URL="https://public.144444.xyz/high.pub"
+            KEY_URL="https://public.144444.xyz/high.txt"
             ;;
         esac
         [ "${KEY_NUM}" == '' ] && echo "Error: Invalid input." && exit 1
@@ -157,6 +157,7 @@ while getopts "oDg:u:f:p:d" OPT; do
         ;;
     D)
         select_pub_key
+        install_key
         ;;
     g)
         KEY_ID=$OPTARG
