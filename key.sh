@@ -37,7 +37,7 @@ fi
 
 select_pub_key() {
     if [ "${KEY_NUM}" == '' ]; then
-        echo -e "1.Low security\n 2.Medium security\n 3.High security\n Please select a public key[1-3]:"
+        echo -e "1.Low security\n2.Medium security\n3.High security\nPlease select a public key[1-3]:"
         read -e  KEY_NUM
         case $KEY_NUM in
         "1")
