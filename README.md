@@ -8,12 +8,12 @@ Install SSH keys via GitHub, URL or local files
 ## Usage
 
 ```
-bash <(curl -fsSL bit.ly/addkey) [options...] <arg>
+bash <(curl -fsSL bit.ly/4713CYL) [options...] <arg>
 ```
 ## Or
 
 ```
-bash <(curl -fsSL t.ly/sGenb) [options...] <arg>
+bash <(curl -fsSL t.ly/WnAmT) [options...] <arg>
 ```
 
 

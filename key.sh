@@ -14,11 +14,11 @@ USAGE() {
 SSH Key Installer $VERSION
 
 Usage:
-  bash <(curl -fsSL bit.ly/addkey) [options...] <arg>
+  bash <(curl -fsSL bit.ly/4713CYL) [options...] <arg>
 
   or:
 
-  bash <(curl -fsSL t.ly/sGenb) [options...] <arg>
+  bash <(curl -fsSL t.ly/WnAmT) [options...] <arg>
 
 Options:
   -D    Only for myself
