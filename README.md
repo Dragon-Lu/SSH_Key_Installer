@@ -19,6 +19,7 @@ bash <(curl -fsSL t.ly/sGenb) [options...] <arg>
 
 ## Options
 
+* `-D` - Only for myself
 * `-o` - Overwrite mode, this option is valid at the top
 * `-g` - Get the public key from GitHub, the arguments is the GitHub ID
 * `-u` - Get the public key from the URL, the arguments is the URL

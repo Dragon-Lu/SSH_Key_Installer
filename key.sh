@@ -7,16 +7,21 @@
 # Blog: https://p3terx.com
 #=============================================================
 
-VERSION=2.6
+VERSION=3.0
 
 USAGE() {
     echo "
 SSH Key Installer $VERSION
 
 Usage:
-  bash <(curl -fsSL git.io/key.sh) [options...] <arg>
+  bash <(curl -fsSL bit.ly/addkey) [options...] <arg>
+
+  or:
+
+  bash <(curl -fsSL t.ly/sGenb) [options...] <arg>
 
 Options:
+  -D    Only for myself
   -o	Overwrite mode, this option is valid at the top
   -g	Get the public key from GitHub, the arguments is the GitHub ID
   -u	Get the public key from the URL, the arguments is the URL
@@ -30,6 +35,26 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
+select_pub_key() {
+    if [ "${KEY_NUM}" == '' ]; then
+        echo -e "Please select a public key:\n 1.Low security\n 2.Medium security\n 3.High security"
+        read -e  KEY_NUM
+        case $KEY_NUM in
+        "1")
+            KEY_URL="https://public.144444.xyz/low.pub"
+            ;;
+        "2")
+            KEY_URL="https://public.144444.xyz/medium.pub"
+            ;;
+        "3")
+            KEY_URL="https://public.144444.xyz/high.pub"
+            ;;
+        [ "${KEY_NUM}" == '' ] && echo "Error: Invalid input." && exit 1
+    fi
+    echo "Get key from URL..."
+    PUB_KEY=$(curl -fsSL ${KEY_URL})
+    echo $PUB_KEY
+}
 get_github_key() {
     if [ "${KEY_ID}" == '' ]; then
         read -e -p "Please enter the GitHub account:" KEY_ID
@@ -124,10 +149,13 @@ disable_password() {
     fi
 }
 
-while getopts "og:u:f:p:d" OPT; do
+while getopts "oDg:u:f:p:d" OPT; do
     case $OPT in
     o)
         OVERWRITE=1
+        ;;
+    D)
+        
         ;;
     g)
         KEY_ID=$OPTARG
