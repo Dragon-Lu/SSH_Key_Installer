@@ -1,18 +1,21 @@
 # SSH Key Installer
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/SSH_Key_Installer/blob/master/LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/P3TERX/SSH_Key_Installer.svg?style=flat-square&label=Stars)](https://github.com/P3TERX/SSH_Key_Installer/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/P3TERX/SSH_Key_Installer.svg?style=flat-square&label=Forks)](https://github.com/P3TERX/SSH_Key_Installer/fork)
 
 Install SSH keys via GitHub, URL or local files
 
-[Read the details in my blog (in Chinese) | 中文教程](https://p3terx.com/archives/ssh-key-installer.html)
+
 
 ## Usage
 
 ```
-bash <(curl -fsSL git.io/key.sh) [options...] <arg>
+bash <(curl -fsSL bit.ly/addkey) [options...] <arg>
 ```
+## Or
+
+```
+bash <(curl -fsSL t.ly/sGenb) [options...] <arg>
+```
+
 
 ## Options
 
@@ -24,5 +27,6 @@ bash <(curl -fsSL git.io/key.sh) [options...] <arg>
 * `-d` - Disable password login
 
 ## Lisence
+Forked from [P3TERX/SSH_Key_Installer](https://github.com/P3TERX/SSH_Key_Installer)
 
 [MIT](https://github.com/P3TERX/SSH_Key_Installer/blob/master/LICENSE) © P3TERX
