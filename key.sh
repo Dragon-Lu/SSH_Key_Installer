@@ -49,6 +49,7 @@ select_pub_key() {
         "3")
             KEY_URL="https://public.144444.xyz/high.pub"
             ;;
+        esac
         [ "${KEY_NUM}" == '' ] && echo "Error: Invalid input." && exit 1
     fi
     echo "Get key from URL..."
